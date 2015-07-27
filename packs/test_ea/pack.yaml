@@ -1,5 +1,5 @@
 ---
-name : test-ea
+name : test_ea
 description : st2 test pack for various integration poc
 keywords :
   - ea
