@@ -1,0 +1,9 @@
+---
+name : test-ea
+description : st2 test pack for various integration poc
+keywords :
+  - ea
+  - fdic
+version : 0.1
+author : Al Maline
+email : amaline@yahoo.com
