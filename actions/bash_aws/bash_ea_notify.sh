@@ -1,14 +1,23 @@
 #!/usr/bin/env bash
 
-message=$1
+message="undefined"
+
+TEMP=`getopt --long message: -n 'st2-ea.ea-notify' -- "$@"`
+eval set -- "$TEMP"
+
+while true; do
+   case "$1" in
+     --message)
+	  message="$2"; shift 2;;
+     *) echo "no message passed!" exit 1;;
+   esac
+done
+        
 
 echo "message>>${message}<<"
-for arg in "$@"; do
-  echo "arg>>${arg}<<"
-done
+echo "pwd>>${PWD}<<"
 
-if [[ ! $message ]]; then
-    # count variable not set so default to 3
+if [[ $message == "undefined" ]]; then
     SMS_MESSAGE="notification with no message passed."
 else
     SMS_MESSAGE=$message
