@@ -1,0 +1,6 @@
+---
+name: "uninstall_pack"
+action_ref: "packs.uninstall"
+description: "uninstall packs"
+formats:
+  - "pack uninstall {{packs}}"
