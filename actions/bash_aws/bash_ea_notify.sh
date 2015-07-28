@@ -2,14 +2,15 @@
 
 message="undefined"
 
-TEMP=`getopt --long message: -n 'st2-ea.ea-notify' -- "$@"`
+TEMP=`getopt -o m: --long message: -n 'st2-ea.ea-notify' -- "$@"`
 eval set -- "$TEMP"
 
 while true; do
    case "$1" in
      --message)
 	  message="$2"; shift 2;;
-     *) echo "no message passed!" exit 1;;
+     --) shift; break ;;
+     *) echo "no message passed!"; exit 1;;
    esac
 done
         
