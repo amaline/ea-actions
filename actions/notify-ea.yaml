@@ -9,4 +9,3 @@ parameters:
     type: string
     description: "Message to send"
     required: true
-    position: 0
