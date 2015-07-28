@@ -1,9 +1,12 @@
 ---
+name: ea-notify
+runner_type: "local-shell-cmd"
 description: Send a SMS notification to all subscribers on aws sns topic.
 enabled: true
 entry_point: bash_aws/bash_ea_notify.sh
-name: ea-notify
 parameters:
   message:
     type: string
-runner_type: "local-shell-cmd"
+    description: "Message to send"
+    required: true
+    position: 0
