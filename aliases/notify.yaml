@@ -1,0 +1,7 @@
+# packs/chatops/aliases/google.yaml
+---
+name: "notify_ea"
+description: "Send a SMS to all registered members of the team."
+action_ref: "st2-ea.notify"
+formats:
+   - "notify {{message}}"
