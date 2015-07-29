@@ -1,5 +1,6 @@
 ---
 name: "google_query"
+description: "Use google as a search engine for the passed string."
 action_ref: "google.get_search_results"
 formats:
   - "google {{query}}"
